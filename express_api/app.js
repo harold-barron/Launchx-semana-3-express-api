@@ -26,3 +26,12 @@ app.get('/v1/explorers',(req,res)=>
     const explorers = [explorer1,explorer2,explorer3,explorer4]
     res.status(200).json(explorers)
 })
+
+//Enviando un id desde la url
+app.get('/v1/explorers/:id',(req,res)=>
+{
+    console.log(`Api explorers GET ALL requests ${new Date()}`)
+    console.log(`Getting explorer with id ${req.params.id}`)
+    const explorer1 = {id:1, name:"harold1"}
+    res.status(200).json(explorer1)
+})
