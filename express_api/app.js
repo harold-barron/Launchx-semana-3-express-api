@@ -40,7 +40,7 @@ app.get('/v1/explorers/:id',(req,res)=>
 
 app.post('/v1/explorers',(req,res)=>
 {
-    console.log(`Api POST request ${new Date()}`)
+    console.log(`Api explorers POST request ${new Date()}`)
     const requestBody = req.body//Parametros de un cliente
     res.status(201).json({message:"Createt"})
 })
@@ -49,8 +49,18 @@ app.post('/v1/explorers',(req,res)=>
 
 app.put('/v1/explorers/:id',(req,res) =>
 {
-    console.log(`Api PUT request ${new Date()}`)
+    console.log(`Api explorers PUT request ${new Date()}`)
     console.log(`Updating  explorer with id ${req.params.id}`)
     const requestBody = req.body//Parametros de un cliente
     res.status(201).json({message:"Createt"})
+})
+
+//DELETE Crea un endpoint para eliminar un explorer
+
+app.delete('/v1/explorers/:id',(req,res) =>
+{
+    console.log(`Api explorers DELETE request ${new Date()}`)
+    console.log(`Delete  explorer with id ${req.params.id}`)
+    const requestBody = req.body//Parametros de un cliente
+    res.status(201).json({message:"Deleted"})
 })
