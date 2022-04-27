@@ -44,3 +44,13 @@ app.post('/v1/explorers',(req,res)=>
     const requestBody = req.body//Parametros de un cliente
     res.status(201).json({message:"Createt"})
 })
+
+//PUT Crea un endpoint que se encargue de actualizar un explorer
+
+app.put('/v1/explorers/:id',(req,res) =>
+{
+    console.log(`Api PUT request ${new Date()}`)
+    console.log(`Updating  explorer with id ${req.params.id}`)
+    const requestBody = req.body//Parametros de un cliente
+    res.status(201).json({message:"Createt"})
+})
