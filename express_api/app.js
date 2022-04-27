@@ -4,3 +4,7 @@ const express = require('express')
 //Creamos app de express
 const app = express()
 
+//indicamos que se va a utilizar un archivo json
+ app.use(express.json)
+
+
