@@ -35,3 +35,12 @@ app.get('/v1/explorers/:id',(req,res)=>
     const explorer1 = {id:1, name:"harold1"}
     res.status(200).json(explorer1)
 })
+
+//post crea un endopoint que se encargue de crear un explorer
+
+app.post('/v1/explorers',(req,res)=>
+{
+    console.log(`Api POST request ${new Date()}`)
+    const requestBody = req.body//Parametros de un cliente
+    res.status(201).json({message:"Createt"})
+})
